@@ -54,7 +54,7 @@ TallerRMI/
 
 ### Requisitos
 - Java JDK 8 o superior
-- Dos máquinas (o VMs) en la misma red
+- Dos máquinas (o VMs) en la misma red ( En este caso se usaron dos maquinas virtuales UBUNTU)
 - Puerto **1099** y **5000** abiertos en el servidor
 
 ### 1. Compilar el proyecto
@@ -62,15 +62,18 @@ TallerRMI/
 Desde la raíz del proyecto, compilar todas las clases:
 
 ```bash
-javac -d out src/model/*.java src/remote/*.java src/server/*.java src/client/*.java
+cd TallerRMI/src
+javac model/*.java remote/*.java server/*.java client/*.java
 ```
 
 ### 2. Levantar el servidor (Máquina A)
 
-Antes de ejecutar, editar `ServidorRMI.java` y `ClienteRMI.java` para reemplazar la IP `10.43.100.115` con la IP real de la máquina servidor.
+Antes de ejecutar, editar `ServidorRMI.java` y `ClienteRMI.java` para reemplazar la IP `10.43.100.115` con la IP real de la máquina servidor. Ádemas de abrir los puertos de comunicación entre el cliente y el servidor.
 
 ```bash
-java -cp out server.ServidorRMI
+sudo ufw allow 1099
+sudo ufw allow 5000
+java server.ServidorRMI
 ```
 
 Salida esperada:
@@ -81,7 +84,7 @@ Servidor RMI listo...
 ### 3. Ejecutar el cliente (Máquina B)
 
 ```bash
-java -cp out client.ClienteRMI
+java client.ClienteRMI
 ```
 
 El cliente mostrará un menú interactivo:
