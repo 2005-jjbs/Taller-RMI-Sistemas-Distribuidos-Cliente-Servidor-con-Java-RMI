@@ -1,5 +1,10 @@
 # 📡 Taller RMI — Sistema Distribuido Cliente-Servidor con Java RMI
 
+**Autor:** Juan José Ballesteros Suarez  
+**Universidad:** Pontificia Universidad Javeriana  
+**Fecha:** 03/2026
+**Grupo:** Juan Diego Rojas - Danna Rojas
+
 Taller académico de la asignatura **Introducción a los Sistemas Distribuidos**, en el que se implementa un sistema cliente-servidor distribuido utilizando **Java RMI (Remote Method Invocation)**. El objetivo principal es demostrar la comunicación entre dos máquinas virtuales a través de la invocación de métodos remotos.
 
 ---
